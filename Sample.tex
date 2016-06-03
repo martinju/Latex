@@ -1,0 +1,112 @@
+\documentclass[a4paper,english,11pt,reqno,oneside]{amsart}
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{a4, babel, graphicx, listings, fancyhdr, verbatim}
+\usepackage[latin1]{inputenc}
+
+\usepackage{hyperref}
+
+\usepackage[format = hang]{caption}                              
+
+\usepackage{natbib}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Key words:}} #1}
+
+\newcommand{\newsquare}{{\hfill{\ \vrule height0.5em width0.5em depth-0.0em}}}
+\renewcommand{\qedsymbol}{$\newsquare$}
+
+% THEOREM-STYLES
+\newtheoremstyle{theorem} %name
+{10pt} % space above
+{10pt} % space below
+{\sl} % body font
+{\parindent} % ident - empty=no indent, \parindent= paragraph indent
+{\bf} % thm head font
+{. } % punctuation after thm head
+{ } % space after thm head: `` ``=normal \newline=linebreak
+{} % thm head specification
+
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{assumption}{Assumption}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+
+\numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\include{Newcommands}
+
+\captionsetup{font = footnotesize}
+
+\setlength\arraycolsep{2pt}
+
+\pdfoptionpdfminorversion=6
+
+%\usepackage[scale=0.75]{geometry}
+\usepackage[a4paper,textheight=24.7truecm,textwidth=16.0truecm,top=2.5truecm]{geometry}
+
+\usepackage{lipsum}
+
+\title[Shorttitle]{Longtitle}
+\date{\today}
+\author{Martin Jullum}
+\address{Norwegian Computing Center, Oslo, Norway}
+\email{jullum@nr.no}
+
+
+\begin{document}
+
+\begin{abstract}
+\lipsum[10]
+\end{abstract}
+
+
+\maketitle
+ 
+\keywords{\noindent {\it Key words: word 1, word 2, word 3, word 4}}
+
+\section{Intro}
+\label{sec:Intro}
+\lipsum
+
+
+\section{Section 2}
+\label{sec:Sec2}
+\lipsum
+
+
+\section{Section 3}
+\label{sec:Sec3}
+
+\lipsum
+
+\section{Concluding remarks}
+\label{sec:ConcludingRemarks}
+\lipsum
+
+
+\appendix 
+
+\section{Citations}
+\label{sec:Appendix}
+Here I just cite my papers to check that it is working...
+\citet{MJ_FICnp16}
+\citet{MJ_CoxFIC16}
+\citet{MJ_TimeSeriesFIC16}
+\citet{MJ_ApproxBayes16}
+\citet{MJ_LeadingEdge16}
+\citet{MJ_TimeSeriesFICRio15}
+\citet{MJ_EAPetroleum_Geostat2015}
+
+
+
+\bibliographystyle{biometrika}
+\bibliography{bibliography}
+
+\end{document}
