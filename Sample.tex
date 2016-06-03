@@ -59,7 +59,6 @@
 \address{Norwegian Computing Center, Oslo, Norway}
 \email{jullum@nr.no}
 
-
 \begin{document}
 
 \begin{abstract}
@@ -74,6 +73,14 @@
 \section{Intro}
 \label{sec:Intro}
 \lipsum
+
+\begin{figure}[ht!]
+	\centering
+		\includegraphics[width=\textwidth]{./figures/testfig.pdf}
+	\caption{This is a test caption}
+	\label{fig:testfig}
+\end{figure}
+
 
 
 \section{Section 2}
@@ -95,13 +102,23 @@
 
 \section{Citations}
 \label{sec:Appendix}
+
+First I try citing Figure \ref{fig:testfig}.
+
 Here I just cite my papers to check that it is working...
+
 \citet{MJ_FICnp16}
+
 \citet{MJ_CoxFIC16}
+
 \citet{MJ_TimeSeriesFIC16}
+
 \citet{MJ_ApproxBayes16}
+
 \citet{MJ_LeadingEdge16}
+
 \citet{MJ_TimeSeriesFICRio15}
+
 \citet{MJ_EAPetroleum_Geostat2015}
 
 
